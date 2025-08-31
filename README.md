@@ -38,8 +38,8 @@
         <tr>
             <td>Right Back</td>
             <td>PCA 15</td>
-            <td>Arduino D4</td>
-            <td>Arduino D3</td>
+            <td>D4</td>
+            <td>D3</td>
         </tr>
         <tr>
             <td>Left Back</td>
