@@ -3,8 +3,8 @@
 #include <Servo.h>
 
 Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
-Servo servoD3; //  D3
-Servo servoD4; //  D4
+Servo servoD3; 
+Servo servoD4; 
 const int PIN_SERVO_D3 = 3;
 const int PIN_SERVO_D4 = 4;
 
@@ -19,12 +19,12 @@ struct LegAngles {
 };
 
 LegAngles basePose[6] = {
-  {90, 140, 40}, // Right-front
-  {90, 80, 20}, // Left-front >>
-  {90, 140, 40}, // Right-middle
-  {90, 80, 20}, // Left-middle>>
-  {90, 140, 40}, // Right-back
-  {90, 80, 20}  // Left-back (D3/D4)>>
+  {90, 140, 40}, 
+  {90, 80, 20}, 
+  {90, 140, 40}, 
+  {90, 80, 20}, 
+  {90, 140, 40}, 
+  {90, 80, 20}  
 };
 
 uint16_t angleToTick(int angle){
@@ -92,21 +92,13 @@ void setStandPose(){
 }
 
 void setup(){
-  Serial.begin(115200);
-  while(!Serial);
-
   pwm.begin();
   pwm.setPWMFreq(PWM_FREQ);
 
   servoD3.attach(PIN_SERVO_D3);
   servoD4.attach(PIN_SERVO_D4);
-
-  delay(500);
-  setStandPose();
-  Serial.println("Done :D");
 }
 
 void loop(){
-  // ยืนค้าง
   delay(1000);
 }
