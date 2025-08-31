@@ -3,8 +3,8 @@
 #include <Servo.h>
 
 Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
-Servo servoD3; // Right-back Tibia -> D3
-Servo servoD4; // Right-back Femur -> D4
+Servo servoD3; //  D3
+Servo servoD4; //  D4
 const int PIN_SERVO_D3 = 3;
 const int PIN_SERVO_D4 = 4;
 
@@ -102,9 +102,8 @@ void setup(){
   servoD4.attach(PIN_SERVO_D4);
 
   delay(500);
-  Serial.println("Setting stand pose...");
   setStandPose();
-  Serial.println("All legs are on the ground. Ready.");
+  Serial.println("Done :D");
 }
 
 void loop(){
